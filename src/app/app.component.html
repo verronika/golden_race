@@ -1,55 +1,137 @@
 
-
-<style>
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-  }
-
-  .toolbar img {
-    margin: 0 16px;
-  }
-
-  
-</style>
-
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img
-    width="40"
-    alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-  />
-  <span>Welcome</span>
-</div>
-
 <div class="content" role="main">
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+  <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile colspan="2" rowspan="3">
+      <mat-card class="example-card">
+        <mat-card-header>       
+          <mat-card-title>Numbers</mat-card-title>
+        </mat-card-header>     
+          <mat-card-content>
+            <section>
+              <div class="example-button-row">
+                <div class="example-flex-container">
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="primary">
+                      1
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="accent">
+                      2
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="warn">
+                      3
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="primary">
+                      4
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="warn">
+                      5
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="primary">
+                      6
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="accent">
+                      7
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="warn">
+                      8
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="primary">
+                      9
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="accent">
+                      10
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </mat-card-content>
+          <mat-card-actions class="position-btn">
+            <button mat-button class="clear-options">Clear selection</button>
+          </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="3">
+      <mat-card class="example-card">
+          <mat-card-content>
+            <section>
+              <div class="example-button-row">
+                <div class="example-flex-container">
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="primary">
+                      1
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="accent">
+                      2
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="warn">
+                      3
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="primary">
+                      4
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab color="warn">
+                      5
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab disabled color="primary">
+                      6
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab disabled color="accent">
+                      7
+                    </button>
+                  </div>
+                  <div class="example-button-container">
+                    <button mat-mini-fab disabled color="warn">
+                      8
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </mat-card-content>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <span matPrefix>5x</span>
+              <input type="number" matInput>
+            </mat-form-field>  
+      
+          <mat-card-actions class="position-btn">
+            <button mat-flat-button  color="primary">
+              ok
+            </button>
+          </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  
 
 </div>
