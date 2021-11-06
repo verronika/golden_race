@@ -1,137 +1,94 @@
-
-<div class="content" role="main">
-  <mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile colspan="2" rowspan="3">
-      <mat-card class="example-card">
-        <mat-card-header>       
-          <mat-card-title>Numbers</mat-card-title>
-        </mat-card-header>     
-          <mat-card-content>
-            <section>
-              <div class="example-button-row">
-                <div class="example-flex-container">
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="primary">
-                      1
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="accent">
-                      2
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="warn">
-                      3
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="primary">
-                      4
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="warn">
-                      5
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="primary">
-                      6
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="accent">
-                      7
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="warn">
-                      8
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="primary">
-                      9
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="accent">
-                      10
-                    </button>
-                  </div>
-                </div>
+<div style="padding: 15px;">
+  <mat-grid-list [cols]="colSize" rowHeight="100px" gutterSize="14px">
+    <mat-grid-tile [colspan]="2" [rowspan]="3" [style.background]="'white'">
+        <mat-grid-tile-header>Numbers</mat-grid-tile-header>
+        <section>
+          <div class="example-button-row">
+            <div class="example-flex-container">
+              <div class="example-button-container">
+                <button mat-fab color="primary">
+                  1
+                </button>
               </div>
-            </section>
-          </mat-card-content>
-          <mat-card-actions class="position-btn">
-            <button mat-button class="clear-options">Clear selection</button>
-          </mat-card-actions>
-        </mat-card>
+              <div class="example-button-container">
+                <button mat-fab color="accent">
+                  2
+                </button>
+              </div>
+              <div class="example-button-container">
+                <button mat-fab color="warn">
+                  3
+                </button>
+              </div>
+              <div class="example-button-container">
+                <button mat-fab color="primary">
+                  4
+                </button>
+              </div>
+              <div class="example-button-container">
+                <button mat-fab color="warn">
+                  5
+                </button>
+              </div>
+              <div class="example-button-container">
+                <button mat-fab color="primary">
+                  6
+                </button>
+              </div>
+              <div class="example-button-container">
+                <button mat-fab color="accent">
+                  7
+                </button>
+              </div>
+              <div class="example-button-container">
+                <button mat-fab color="warn">
+                  8
+                </button>
+              </div>
+              <div class="example-button-container">
+                <button mat-fab color="primary">
+                  9
+                </button>
+              </div>
+              <div class="example-button-container">
+                <button mat-fab color="accent">
+                  10
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <mat-grid-tile-footer>
+          <button mat-flat-button class="clear-button" color="primary">
+            Clear selection
+          </button>
+        </mat-grid-tile-footer>
     </mat-grid-tile>
-    <mat-grid-tile colspan="2" rowspan="3">
-      <mat-card class="example-card">
-          <mat-card-content>
-            <section>
-              <div class="example-button-row">
-                <div class="example-flex-container">
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="primary">
-                      1
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="accent">
-                      2
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="warn">
-                      3
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="primary">
-                      4
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab color="warn">
-                      5
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab disabled color="primary">
-                      6
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab disabled color="accent">
-                      7
-                    </button>
-                  </div>
-                  <div class="example-button-container">
-                    <button mat-mini-fab disabled color="warn">
-                      8
-                    </button>
-                  </div>
-                </div>
+    <mat-grid-tile [colspan]="1" [rowspan]="3" [style.background]="'white'">
+      <app-placebet></app-placebet>
+    </mat-grid-tile>
+    <mat-grid-tile
+        [colspan]="2"
+        [rowspan]="3"
+        [style.background]="'white'">
+        <mat-grid-tile-header><span class="result-title">Result</span></mat-grid-tile-header>
+        <section>
+          <div class="example-button-row">
+            <div class="example-flex-container">
+              <div class="example-button-container">
+                <button mat-fab color="primary">
+                  1
+                </button>
               </div>
-            </section>
-          </mat-card-content>
-            <mat-form-field class="example-full-width" appearance="fill">
-              <span matPrefix>5x</span>
-              <input type="number" matInput>
-            </mat-form-field>  
-      
-          <mat-card-actions class="position-btn">
-            <button mat-flat-button  color="primary">
-              ok
-            </button>
-          </mat-card-actions>
-        </mat-card>
+            </div>
+          </div>
+        </section>
+        <mat-grid-tile-footer>
+          <span class="result-won">YOU WON</span>
+        </mat-grid-tile-footer>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="3" [style.background]="'white'">
+        <app-placebet></app-placebet>
     </mat-grid-tile>
   </mat-grid-list>
-  
-
 </div>

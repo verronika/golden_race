@@ -1,0 +1,57 @@
+<mat-grid-list  [cols]="1" rowHeight="100px" >
+    <mat-grid-tile>
+    <div class="example-button-row">
+        <div class="example-flex-container">
+        <div class="example-button-container">
+            <button mat-mini-fab color="primary">
+            1
+            </button>
+        </div>
+        <div class="example-button-container">
+            <button mat-mini-fab color="accent">
+            2
+            </button>
+        </div>
+        <div class="example-button-container">
+            <button mat-mini-fab color="warn">
+            3
+            </button>
+        </div>
+        <div class="example-button-container">
+            <button mat-mini-fab color="primary">
+            4
+            </button>
+        </div>
+        <div class="example-button-container">
+            <button mat-mini-fab color="warn">
+            5
+            </button>
+        </div>
+        <div class="example-button-container">
+            <button mat-mini-fab disabled color="primary">
+            6
+            </button>
+        </div>
+        <div class="example-button-container">
+            <button mat-mini-fab disabled color="accent">
+            7
+            </button>
+        </div>
+        <div class="example-button-container">
+            <button mat-mini-fab disabled color="warn">
+            8
+            </button>
+        </div>
+        </div>
+    </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+    <span matBadge="5x" matBadgeSize="medium"></span>
+    <mat-form-field  class="example-form-field" appearance="fill">
+        <input type="number" matInput>
+    </mat-form-field>  
+    <button mat-flat-button  color="primary">
+        OK
+    </button>
+    </mat-grid-tile>
+</mat-grid-list>
