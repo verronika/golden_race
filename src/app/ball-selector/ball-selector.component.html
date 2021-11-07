@@ -2,54 +2,9 @@
 <section>
   <div class="example-button-row">
     <div class="example-flex-container">
-      <div class="example-button-container">
-        <button mat-fab color="primary">
-          1
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab color="accent">
-          2
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab color="warn">
-          3
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab color="primary">
-          4
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab color="warn">
-          5
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab color="primary">
-          6
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab color="accent">
-          7
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab color="warn">
-          8
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab color="primary">
-          9
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab color="accent">
-          10
+      <div class="example-button-container" *ngFor="let ball of balls">
+        <button (click)="clickBall($event, ball.number)" mat-fab color="{{ball.color}}">
+          {{ball.number}}
         </button>
       </div>
     </div>
