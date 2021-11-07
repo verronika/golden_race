@@ -46,12 +46,20 @@
     </div>
     </mat-grid-tile>
     <mat-grid-tile>
-    <span matBadge="5x" matBadgeSize="medium"></span>
-    <mat-form-field  class="example-form-field" appearance="fill">
-        <input type="number" matInput>
-    </mat-form-field>  
-    <button mat-flat-button  color="primary">
-        OK
-    </button>
+        <span matBadge="5x" matBadgeSize="medium"></span>
+        <mat-form-field  class="example-form-field" appearance="fill">
+            <input type="number" matInput>
+        </mat-form-field>  
+        <button mat-flat-button  class="buttonOK" color="primary">
+            OK
+        </button>
     </mat-grid-tile>
+    <mat-grid-tile>
+        <span>Total: 500€</span>
+    </mat-grid-tile>
+    <mat-grid-tile-footer>
+        <button mat-flat-button color="primary">
+            Place bet
+        </button>
+    </mat-grid-tile-footer>
 </mat-grid-list>

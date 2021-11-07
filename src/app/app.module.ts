@@ -9,13 +9,17 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatBadgeModule} from '@angular/material/badge';
 import { PlacebetComponent } from './placebet/placebet.component';
+import { BallSelectorComponent } from './ball-selector/ball-selector.component';
+import { ResultballComponent } from './resultball/resultball.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlacebetComponent
+    PlacebetComponent,
+    BallSelectorComponent,
+    ResultballComponent
   ],
   imports: [
     BrowserModule,
