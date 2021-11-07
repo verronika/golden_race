@@ -1,11 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { DataService } from "../data.service";
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-ball-selector',
   templateUrl: './ball-selector.component.html',
   styleUrls: ['./ball-selector.component.css']
 })
-export class BallSelectorComponent implements OnInit {
+export class BallSelectorComponent implements OnInit, OnDestroy{
+
+  message!: string;
+  subscription!: Subscription;
 
   balls: Array<any> = [
     {
@@ -50,13 +55,17 @@ export class BallSelectorComponent implements OnInit {
     },
   ];
   
-  constructor() { }
+  constructor(private data: DataService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+   
+  }
+
+  ngOnDestroy() {
   }
 
   clickBall(event: any, numberSelection: number) {
-    console.log(numberSelection);
+    this.data.changeMessage(numberSelection)
   }
 
 }
