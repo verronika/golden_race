@@ -3,13 +3,14 @@
         <div class="example-button-row">
             <div class="example-flex-container">
               <div class="example-button-container">
-                <button mat-fab color="primary">
-                  1
+                <button mat-fab *ngIf="executeGame && winner" color="{{winnerBall.color}}">
+                  {{winnerBall.number}}
                 </button>
               </div>
             </div>
         </div>
     </section>
-<mat-grid-tile-footer>
-    <span class="result-won">YOU WON</span>
+<mat-grid-tile-footer *ngIf="executeGame">
+    <span class="result-won" *ngIf="winner == true">YOU WON</span>
+    <span class="result-lose" *ngIf="winner == false">YOU LOSE</span>
 </mat-grid-tile-footer>

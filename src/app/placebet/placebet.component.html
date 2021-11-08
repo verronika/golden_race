@@ -12,19 +12,19 @@
     </div>
     </mat-grid-tile>
     <mat-grid-tile>
-        <span matBadge="5x" matBadgeSize="medium"></span>
-        <mat-form-field  class="example-form-field" appearance="fill">
-            <input type="number" matInput>
+        <span matBadge="{{contador}}x" matBadgeSize="medium"></span>
+        <mat-form-field class="example-form-field" appearance="fill" >
+            <input type="number" matInput [(ngModel)]="placebet">
         </mat-form-field>  
-        <button mat-flat-button  class="buttonOK" color="primary">
+        <button type="submit" mat-flat-button  class="buttonOK" color="primary" (click)="okResult()">
             OK
         </button>
     </mat-grid-tile>
     <mat-grid-tile>
-        <span class="position-total">Total: 500€</span>
+        <span class="position-total">Total: {{resultado}}€</span>
     </mat-grid-tile>
     <mat-grid-tile-footer>
-        <button class="placebet-button" mat-flat-button color="primary">
+        <button class="placebet-button" mat-flat-button color="primary" (click)="placebetResult()">
             Place bet
         </button>
     </mat-grid-tile-footer>
