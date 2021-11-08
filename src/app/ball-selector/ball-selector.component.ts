@@ -64,8 +64,11 @@ export class BallSelectorComponent implements OnInit, OnDestroy{
   ngOnDestroy() {
   }
 
-  clickBall(event: any, numberSelection: number) {
+  clickBall(event: any, numberSelection: any) {
     this.data.changeMessage(numberSelection)
+  }
+  clearSelection(event: any) {
+    this.data.clear(true)
   }
 
 }

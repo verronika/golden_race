@@ -3,7 +3,7 @@
   <div class="example-button-row">
     <div class="example-flex-container">
       <div class="example-button-container" *ngFor="let ball of balls">
-        <button (click)="clickBall($event, ball.number)" mat-fab color="{{ball.color}}">
+        <button (click)="clickBall($event, ball)" mat-fab color="{{ball.color}}">
           {{ball.number}}
         </button>
       </div>
@@ -11,7 +11,7 @@
   </div>
 </section>
 <mat-grid-tile-footer>
-  <button mat-flat-button class="clear-button" color="primary">
+  <button mat-flat-button class="clear-button" (click)= "clearSelection($event)" color="primary">
     Clear selection
   </button>
 </mat-grid-tile-footer>
