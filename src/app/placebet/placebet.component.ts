@@ -113,16 +113,13 @@ export class PlacebetComponent implements OnInit, OnDestroy {
       this.disabledButton=false;
     }
   }
-
-  
   placebetResult() {
       let message = {
         balls: this.balls,
         resultado: this.resultado
       }
-     
       this.data.resultGame(message)
-      
+
   }
 }
 

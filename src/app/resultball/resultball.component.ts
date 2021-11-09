@@ -15,24 +15,29 @@ export class ResultballComponent implements OnInit {
   executeGame : boolean = false;
   winnerBall: any;
   subscription!: Subscription;
+  profit : number= 0;
                          
   constructor(private data: DataService) { }
 
   ngOnInit(): void {
     this.subscription = this.data.currentResult.subscribe(data => {
       
-      var dataReceived: GameBallReceived = data
       var randomNumber= this.getRandomInt(1,11);
-      if(typeof dataReceived.balls != 'undefined' ){
-        dataReceived.balls.forEach((ball: GameDataReceived) => {
-            if (ball.number == randomNumber ) {
-              this.winner = true;
-              this.winnerBall = ball;
-            }
-        });
-        this.executeGame= true;
+      if(typeof data.balls != 'undefined' ){
+       this.checkWinner(data,randomNumber)
       }
     })
+    
+  }
+  checkWinner(data:GameBallReceived,winnerNumber:number){
+    data.balls.forEach((ball: GameDataReceived) => {
+      if (ball.number == winnerNumber ) {
+        this.winner = true;
+        this.winnerBall = ball;
+        this.profit = data.resultado * 1.5
+      }
+    });
+    this.executeGame= true;
   }
   getRandomInt(min: number, max: number) {
     return Math.floor(Math.random() * (max - min)) + min;

@@ -35,4 +35,25 @@ describe('PlacebetComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+  it('multiplicacion ok', () => {
+
+    component.contador = 3
+    component.placebet = 20
+    component.okResult()
+    expect(component.resultado).toEqual(60)
+    expect(component.error).toEqual(false)
+    expect(component.error2).toEqual(false)
+    expect(component.disabledButton).toEqual(false)
+  });
+
+  it('sin apuesta', () => {
+    component.contador = 3
+    component.okResult()
+    expect(component.error).toEqual(false)
+    expect(component.error2).toEqual(true)
+    expect(component.disabledButton).toEqual(true)
+  });
+
 });

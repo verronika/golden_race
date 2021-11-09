@@ -11,6 +11,6 @@
         </div>
     </section>
 <mat-grid-tile-footer *ngIf="executeGame">
-    <span class="result-won" *ngIf="winner == true">YOU WON</span>
+    <span class="result-won" *ngIf="winner == true">YOU WON  {{profit}}€</span>
     <span class="result-lose" *ngIf="winner == false">YOU LOSE</span>
 </mat-grid-tile-footer>
