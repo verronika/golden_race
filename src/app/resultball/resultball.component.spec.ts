@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResultballComponent } from './resultball.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing'
+import { DataService } from '../data.service';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('ResultballComponent', () => {
   let component: ResultballComponent;
@@ -8,7 +11,16 @@ describe('ResultballComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ResultballComponent ]
+      imports: [
+        HttpClientTestingModule
+      ],
+      declarations: [ 
+        ResultballComponent 
+      ],
+      providers: [
+        DataService
+      ],
+      schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   });

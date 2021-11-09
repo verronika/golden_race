@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PlacebetComponent } from './placebet.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing'
+import { DataService } from '../data.service';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+
 
 describe('PlacebetComponent', () => {
   let component: PlacebetComponent;
@@ -8,7 +12,16 @@ describe('PlacebetComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PlacebetComponent ]
+      imports: [
+        HttpClientTestingModule
+      ],
+      declarations: [ 
+        PlacebetComponent 
+      ],
+      providers: [
+        DataService
+      ],
+      schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   });

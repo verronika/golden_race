@@ -16,3 +16,9 @@
     width: 100%;
     font-size: 15px;
 }
+.minimunerror{
+    position: absolute;
+    bottom: 12px;
+    left: 72px;
+    color: red;
+}

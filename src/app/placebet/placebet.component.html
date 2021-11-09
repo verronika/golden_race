@@ -16,15 +16,17 @@
         <mat-form-field class="example-form-field" appearance="fill" >
             <input type="number" matInput [(ngModel)]="placebet">
         </mat-form-field>  
-        <button type="submit" mat-flat-button  class="buttonOK" color="primary" (click)="okResult()">
+        <button type="submit" mat-flat-button   class="buttonOK" color="primary" (click)="okResult()">
             OK
         </button>
+        <span *ngIf="error" class="minimunerror">*La apuesta minima son 5€</span>
+        <span *ngIf="error2" class="minimunerror">*Debe introcucir un valor</span>
     </mat-grid-tile>
     <mat-grid-tile>
-        <span class="position-total">Total: {{resultado}}€</span>
+        <span class="position-total" *ngIf="!disabledButton">Total: {{resultado}}€</span>
     </mat-grid-tile>
     <mat-grid-tile-footer>
-        <button class="placebet-button" mat-flat-button color="primary" (click)="placebetResult()">
+        <button class="placebet-button" ng mat-flat-button color="primary" [disabled]="disabledButton" (click)="placebetResult()">
             Place bet
         </button>
     </mat-grid-tile-footer>

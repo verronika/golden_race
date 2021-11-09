@@ -14,7 +14,6 @@ export class ResultballComponent implements OnInit {
   winner : boolean = false;
   executeGame : boolean = false;
   winnerBall: any;
-
   subscription!: Subscription;
                          
   constructor(private data: DataService) { }
@@ -24,7 +23,6 @@ export class ResultballComponent implements OnInit {
       
       var dataReceived: GameBallReceived = data
       var randomNumber= this.getRandomInt(1,11);
-      console.log(dataReceived);
       if(typeof dataReceived.balls != 'undefined' ){
         dataReceived.balls.forEach((ball: GameDataReceived) => {
             if (ball.number == randomNumber ) {
@@ -36,12 +34,7 @@ export class ResultballComponent implements OnInit {
       }
     })
   }
-
   getRandomInt(min: number, max: number) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
-
-
-
-
 }
